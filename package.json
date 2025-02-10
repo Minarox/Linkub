@@ -1,0 +1,31 @@
+{
+  "name": "linkub",
+  "description": "All links in one place",
+  "author": {
+    "name": "Mathis Serrieres Maniecki",
+    "email": "contact@minarox.fr",
+    "url": "https://minarox.fr/"
+  },
+  "bugs": {
+    "url": "https://github.com/Minarox/Linkub/issues",
+    "email": "contact@minarox.fr"
+  },
+  "homepage": "https://github.com/Minarox/Linkub#readme",
+  "readme": "./README.md",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Minarox/Linkub.git"
+  },
+  "type": "module",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^5.2.5"
+  }
+}

@@ -1,0 +1,26 @@
+{
+   "name": "Linkub",
+   "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+   "features": {
+      "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+        "packages": "gnupg2"
+    }
+   },
+   "remoteUser": "node",
+   "runArgs": [
+      "--name",
+      "linkub_devcontainer"
+   ],
+   "postStartCommand": "npm install",
+   "forwardPorts": [4321],
+   "customizations": {
+      "vscode": {
+         "extensions": [
+            "astro-build.astro-vscode",
+            "ecmel.vscode-html-css",
+            "vivaxy.vscode-conventional-commits",
+            "dbaeumer.vscode-eslint"
+         ]
+      }
+   }
+}

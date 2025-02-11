@@ -29,6 +29,7 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.2.1",
     "@iconify-json/fa6-brands": "^1.2.5",
+    "@iconify-json/mdi": "^1.2.3",
     "astro": "^5.2.5",
     "astro-compressor": "^1.0.0",
     "astro-font": "^1.0.0",

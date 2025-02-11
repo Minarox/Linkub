@@ -17,6 +17,7 @@
       "vscode": {
          "extensions": [
             "astro-build.astro-vscode",
+            "github.vscode-github-actions",
             "ecmel.vscode-html-css",
             "vivaxy.vscode-conventional-commits",
             "dbaeumer.vscode-eslint"

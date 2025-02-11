@@ -1,11 +1,75 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from '@layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Logo from '@assets/logo.svg';
+import Links, { type Props } from '@components/Links.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const title: string = "Linkub";
+const social: Props['social'] = [
+	{
+		name: "YouTube",
+		url: "https://youtube.com"
+	},
+	{
+		name: "Twitch",
+		url: "https://twitch.tv"
+	},
+	{
+		name: "X",
+		url: "https://x.com",
+		icon: "x-twitter"
+	},
+	{
+		name: "Instagram",
+		url: "https://instagram.com"
+	},
+	{
+		name: "GitHub",
+		url: "https://github.com"
+	},
+	{
+		name: "Email",
+		url: "mailto:contact@example.com",
+		icon: "envelope",
+		pack: "mdi"
+	}
+]
 ---
 
 <Layout>
-	<Welcome />
+	<main>
+		<header>
+			<Image src={Logo} alt={`${title} logo`} width="140" />
+			<h1>{title}</h1>
+		</header>
+
+		<article>
+			<Links social={social} />
+		</article>
+	</main>
 </Layout>
+
+<style lang="scss">
+	main {
+		width: 100vw;
+		height: 100vh;
+		display: grid;
+		grid-template-rows: 0.6fr 1fr;
+		align-items: center;
+		justify-items: center;
+
+		header {
+			padding: 1rem;
+
+			img {
+				padding: 0.5rem;
+			}
+
+			h1 {
+				margin: 0;
+				font-size: 2em;
+				font-weight: 700;
+			}
+		}
+	}
+</style>

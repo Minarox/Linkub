@@ -1,5 +1,6 @@
 ---
 import { SEO } from "astro-seo";
+import { AstroFont } from "astro-font";
 import Logo from "@assets/astro.svg";
 import Background from "@assets/background.svg";
 
@@ -55,8 +56,32 @@ const creator: string = "Minarox";
 				{ name: "robots", content: "index, follow" },
 				{ name: "language", content: "English" },
 				{ name: "author", content: creator }
-				],
+				]
 			}}
+		/>
+
+		<AstroFont
+			config={[
+				{
+					name: "Lato",
+					src: [
+					{
+						style: "normal",
+						weight: 400,
+						path: "./public/font/Lato-Regular.ttf"
+					},
+					{
+						style: "bold",
+						weight: 700,
+						path: "./public/font/Lato-Bold.ttf"
+					},
+					],
+					preload: true,
+					display: "swap",
+					selector: "body",
+					fallback: "sans-serif",
+				}
+			]}
 		/>
 	</head>
 	<body>

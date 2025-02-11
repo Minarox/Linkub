@@ -1,0 +1,50 @@
+name: Building Website
+
+on:
+    pull_request
+
+env:
+    ASTRO_TELEMETRY_DISABLED: 1
+
+permissions:
+    contents: read
+
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
+jobs:
+    dependencies:
+        name: Dependencies
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout project
+              uses: actions/checkout@v4
+
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                node-version: 20
+                cache: npm
+
+            - name: Install dependencies
+              run: npm ci
+
+    check:
+        name: Check
+        needs: dependencies
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Check types
+              run: npm run check
+
+    build:
+        name: Build
+        needs: dependencies
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Build website
+              run: npm run build

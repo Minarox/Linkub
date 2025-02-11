@@ -22,6 +22,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
+    "check": "astro check",
     "build": "astro build",
     "preview": "astro preview"
   },

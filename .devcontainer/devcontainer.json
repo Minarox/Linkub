@@ -20,7 +20,8 @@
             "github.vscode-github-actions",
             "ecmel.vscode-html-css",
             "vivaxy.vscode-conventional-commits",
-            "dbaeumer.vscode-eslint"
+            "dbaeumer.vscode-eslint",
+            "vitest.explorer"
          ]
       }
    }

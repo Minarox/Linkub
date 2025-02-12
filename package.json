@@ -24,7 +24,9 @@
     "dev": "astro dev",
     "check": "astro check",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "test": "vitest run --coverage",
+    "coverage": "vite preview --outDir ./coverage"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.1",
@@ -37,5 +39,9 @@
     "astro-meta-tags": "^0.3.1",
     "astro-seo": "^0.8.4",
     "sass": "^1.84.0"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^3.0.5",
+    "vitest": "^3.0.5"
   }
 }

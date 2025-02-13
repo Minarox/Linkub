@@ -23,7 +23,8 @@
 
 1. Clone template
 
-    Use built-in GitHub template feature to clone this repository or use: `git clone https://github.com/Minarox/Linkub`.
+    Use built-in GitHub template feature to clone this repository or use:  
+    `git clone https://github.com/Minarox/Linkub`.
 
 2. Edit project (variables and assets)
 
@@ -33,7 +34,7 @@
 
     Generate website from source files: `npm run build`.
 
-    Congratulation, you have now a landing page with all of your links.
+    Congratulation, you have now a landing page with all of your links.  
     The final website is located inside `/dist` and is ready to deploy online!
 
 ## ⚙️ Scripts

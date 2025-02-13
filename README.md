@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="src/assets/logo.svg" width="112px">
+  <img src=".github/logo.svg" width="112px">
 </p>
 
 <h1 align="center">Linkub</h1>
@@ -7,16 +7,16 @@
 [Linkub](https://github.com/Minarox/Linkub) is a simple web page that lists all your links to other sites. ([Demo »](https://minarox.github.com/Linkub))
 
 <div align="center">
-  <img src="/.github/screenshot.png" width="80%">
+  <img src="/.github/screenshot.webp" width="80%">
 </div>
 
 <sub>If you like this project, please star it & [follow me](https://github.com/Minarox) to see what other cool projects I'm working on! ❤️</sub>
 
 ## ⭐️ Features
 
-- 📦 **Simple layout** - Easly show and share all of your links
-- 🔥 **SEO friendly** - Auto generating tags for better referencing
-- ⚙️ **Responsive** - Already compatible with all screen sizes
+- 🖼️ **Simple layout** - Easly show and share all of your links
+- 🔍 **SEO friendly** - Auto generating tags for better referencing
+- 📱 **Responsive** - Already compatible with all screen sizes
 - ⚙️ **Configurable** - Change name, description and links with ease
 
 ## 🚦 3-step setup

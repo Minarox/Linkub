@@ -21,7 +21,11 @@
             "ecmel.vscode-html-css",
             "vivaxy.vscode-conventional-commits",
             "dbaeumer.vscode-eslint",
-            "vitest.explorer"
+            "vitest.explorer",
+            "usernamehw.errorlens",
+            "mk12.better-git-line-blame",
+            "esbenp.prettier-vscode",
+            "rvest.vs-code-prettier-eslint"
          ]
       }
    }

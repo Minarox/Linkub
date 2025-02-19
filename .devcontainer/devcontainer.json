@@ -23,7 +23,6 @@
             "dbaeumer.vscode-eslint",
             "vitest.explorer",
             "usernamehw.errorlens",
-            "mk12.better-git-line-blame",
             "esbenp.prettier-vscode",
             "rvest.vs-code-prettier-eslint"
          ]

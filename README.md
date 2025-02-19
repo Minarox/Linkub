@@ -35,7 +35,7 @@
     Generate website from source files: `npm run build`.
 
     Congratulation, you have now a landing page with all of your links.  
-    The final website is located inside `/dist` and is ready to deploy online!
+    The final website is located inside `/build` and is ready to deploy online!
 
 ## ⚙️ Scripts
 
@@ -55,13 +55,13 @@ Scan all source files and search for TypeScript warnings and errors.
 
 Command: `npm run build`
 
-Build static pages from source files in `/dist` folder.
+Build static pages from source files in `/build` folder.
 
 ### preview
 
 Command: `npm run preview`
 
-Start Astro web server to preview static pages (`/dist`) at [http://localhost:4321](http://localhost:4321).
+Start Astro web server to preview static pages (`/build`) at [http://localhost:4321](http://localhost:4321).
 
 ### test
 

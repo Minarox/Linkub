@@ -4,10 +4,14 @@ import { AstroFont } from "astro-font";
 import Logo from "@assets/logo.svg";
 import Background from "@assets/background.svg";
 
-const title: string = "Linkub";
-const description: string = "All links in one place.";
-const keywords: string = "Linkhub, Link, social media, hub, landing page, web";
-const creator: string = "Minarox";
+export interface Props {
+	title: string;
+	description: string;
+	keywords: string;
+	creator: string;
+}
+
+const { title, description, keywords, creator } = Astro.props;
 const background: string = `url(${Background.src})`;
 const baseUrl: string = import.meta.env.BASE_URL;
 ---

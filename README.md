@@ -59,8 +59,8 @@
         // Links
         const social = [
           {
-            name: "YouTube",
-            url: "https://youtube.com"
+            name: "GitHub",
+            url: "https://github.com"
           },
           {
             name: "Email",
@@ -123,6 +123,10 @@ Start Vite web server to preview coverage report at [http://localhost:4173](http
 
 ## 💁‍♀️ Q&A
 
+### Why another linktree like project?
+
+I needed a simple, lightweight, and easily customizable template to deploy for several side projects.
+
 ### How are the links constructed?
 
 The list of links is constructed by following an array of objects:
@@ -141,6 +145,14 @@ If the default behavior does not suit you, you can force a different icon only f
 
 If you want to use another icon pack from [iconify](https://icon-sets.iconify.design/), you must use `icon` and `pack` together.  
 Also, remember to install the library with `pnpm install @iconify-json/...` in the project and restart any instance of Astro previously running.
+
+### How do I deploy the project?
+
+By default, the project includes a workflow to automate the deployment of the website on GitHub Pages from the main branch.
+
+If you want to deploy the website elsewhere, you need to build the project with the command `pnpm build` and deploy the files from `build/` to any web hosting platform that supports static websites.
+Please refer directly to the documentation of the relevant platforms.
+
 
 ## 💼 License
 

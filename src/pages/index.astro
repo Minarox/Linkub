@@ -2,10 +2,14 @@
 import Layout from '@layouts/Layout.astro';
 import { Image } from 'astro:assets';
 import Logo from '@assets/logo.svg';
-import Links, { type Props } from '@components/Links.astro';
+import Links, { type Props as LinksProps } from '@components/Links.astro';
+import { type Props as LayoutProps } from '@layouts/Layout.astro';
 
-const title: string = "Linkub";
-const social: Props['social'] = [
+const title: LayoutProps['title'] = "Linkub";
+const description: LayoutProps['description'] = "All links in one place.";
+const keywords: LayoutProps['keywords'] = "Linkhub, Link, social media, hub, landing page, web";
+const creator: LayoutProps['creator'] = "Minarox";
+const social: LinksProps['social'] = [
 	{
 		name: "YouTube",
 		url: "https://youtube.com"
@@ -36,7 +40,7 @@ const social: Props['social'] = [
 ]
 ---
 
-<Layout>
+<Layout title={title} description={description} keywords={keywords} creator={creator}>
 	<main>
 		<header>
 			<Image src={Logo} alt={`${title} logo`} width="140" />

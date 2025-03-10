@@ -23,9 +23,7 @@ const social: Props['social'] = [
 test('Array of links', async () => {
 	const container: AstroContainer = await AstroContainer.create();
 	const component: string = await container.renderToString(Links, {
-		props: {
-			social: social
-		}
+		props: { social: social }
 	});
 	for (const link of social) {
 		expect(component).toContain(link.name);

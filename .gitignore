@@ -9,6 +9,8 @@ coverage/
 
 # dependencies
 node_modules/
+.pnpm-store/
+package-lock.json
 
 # logs
 npm-debug.log*

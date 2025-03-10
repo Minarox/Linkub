@@ -1,47 +1,47 @@
 {
-  "name": "linkub",
-  "description": "All links in one place",
-  "author": {
-    "name": "Mathis Serrieres Maniecki",
-    "email": "contact@minarox.fr",
-    "url": "https://minarox.fr/"
-  },
-  "bugs": {
-    "url": "https://github.com/Minarox/Linkub/issues",
-    "email": "contact@minarox.fr"
-  },
-  "homepage": "https://github.com/Minarox/Linkub#readme",
-  "readme": "./README.md",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Minarox/Linkub.git"
-  },
-  "type": "module",
-  "private": true,
-  "version": "1.0.0",
-  "scripts": {
-    "dev": "astro dev",
-    "check": "astro check",
-    "build": "astro build",
-    "preview": "astro preview",
-    "test": "vitest run --coverage",
-    "coverage": "vite preview --outDir ./coverage"
-  },
-  "dependencies": {
-    "@astrojs/sitemap": "^3.2.1",
-    "@iconify-json/fa6-brands": "^1.2.5",
-    "@iconify-json/mdi": "^1.2.3",
-    "astro": "^5.3.0",
-    "astro-compressor": "^1.0.0",
-    "astro-font": "^1.0.0",
-    "astro-icon": "^1.1.5",
-    "astro-meta-tags": "^0.3.1",
-    "astro-seo": "^0.8.4",
-    "sass": "^1.84.0"
-  },
-  "devDependencies": {
-    "@vitest/coverage-v8": "^3.0.5",
-    "vitest": "^3.0.5"
-  }
+    "name": "linkub",
+    "description": "All links in one place",
+    "author": {
+        "name": "Mathis Serrieres Maniecki",
+        "email": "contact@minarox.fr",
+        "url": "https://minarox.fr/"
+    },
+    "bugs": {
+        "url": "https://github.com/Minarox/Linkub/issues",
+        "email": "contact@minarox.fr"
+    },
+    "homepage": "https://github.com/Minarox/Linkub#readme",
+    "readme": "./README.md",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Minarox/Linkub.git"
+    },
+    "type": "module",
+    "private": true,
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "astro dev",
+        "check": "astro check",
+        "build": "astro build",
+        "preview": "astro preview",
+        "test": "vitest run --coverage",
+        "coverage": "vite preview --outDir ./coverage"
+    },
+    "dependencies": {
+        "@astrojs/sitemap": "^3.2.1",
+        "@iconify-json/fa6-brands": "^1.2.5",
+        "@iconify-json/mdi": "^1.2.3",
+        "astro": "^5.4.2",
+        "astro-compressor": "^1.0.0",
+        "astro-font": "^1.0.0",
+        "astro-icon": "^1.1.5",
+        "astro-meta-tags": "^0.3.1",
+        "astro-seo": "^0.8.4",
+        "sass": "^1.85.1"
+    },
+    "devDependencies": {
+        "@vitest/coverage-v8": "^3.0.8",
+        "vitest": "^3.0.8"
+    }
 }

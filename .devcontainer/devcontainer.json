@@ -2,6 +2,7 @@
    "name": "Linkub",
    "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
    "features": {
+      "ghcr.io/devcontainers-extra/features/pnpm:2": {},
       "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
         "packages": "gnupg2"
     }
@@ -11,7 +12,7 @@
       "--name",
       "linkub_devcontainer"
    ],
-   "postStartCommand": "npm install",
+   "postStartCommand": "pnpm install",
    "forwardPorts": [4321],
    "customizations": {
       "vscode": {
@@ -24,7 +25,9 @@
             "vitest.explorer",
             "usernamehw.errorlens",
             "esbenp.prettier-vscode",
-            "rvest.vs-code-prettier-eslint"
+            "rvest.vs-code-prettier-eslint",
+            "GitHub.copilot",
+            "GitHub.copilot-chat"
          ]
       }
    }

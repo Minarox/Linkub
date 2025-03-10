@@ -22,9 +22,13 @@
 ## 🚦 3-step setup
 
 1. Clone template
+    ```bash
+        git clone https://github.com/Minarox/Linkub
+        cd Linkub
+        pnpm install
+    ```
 
-    Use built-in GitHub template feature to clone this repository or use:  
-    `git clone https://github.com/Minarox/Linkub`.
+    You can also use built-in GitHub template feature to clone this repository on your account.
 
 2. Edit project (variables and assets)
 
@@ -32,46 +36,49 @@
 
 3. Build static files
 
-    Generate website from source files: `npm run build`.
+    Generate website from source files: `pnpm build`.
 
     Congratulation, you have now a landing page with all of your links.  
     The final website is located inside `/build` and is ready to deploy online!
 
 ## ⚙️ Scripts
 
+This project use [pnpm](https://pnpm.io/) as package manager.
+You can also continue to use [npm](https://www.npmjs.com/) but you have to adapt commands from documentation to make it work properly.
+
 ### dev
 
-Command: `npm run dev`
+Command: `pnpm dev`
 
 Start Astro web development server at [http://localhost:4321](http://localhost:4321).
 
 ### check
 
-Command: `npm run check`
+Command: `pnpm check`
 
 Scan all source files and search for TypeScript warnings and errors.
 
 ### build
 
-Command: `npm run build`
+Command: `pnpm build`
 
 Build static pages from source files in `/build` folder.
 
 ### preview
 
-Command: `npm run preview`
+Command: `pnpm preview`
 
 Start Astro web server to preview static pages (`/build`) at [http://localhost:4321](http://localhost:4321).
 
 ### test
 
-Default: `npm run test`
+Default: `pnpm test`
 
 One time run of all tests inside `/test` folder with complete code coverage.
 
 ### coverage
 
-Default: `npm run coverage`
+Default: `pnpm coverage`
 
 Start Vite web server to preview coverage report at [http://localhost:4173](http://localhost:4173).
 
@@ -88,4 +95,4 @@ Yes. All you need to do is specify distribution files in the `files` array in `p
 
 ## 💼 License
 
-MIT © Mathis Serrieres Maniecki
+MIT © [Mathis Serrieres Maniecki](https://github.com/Minarox)

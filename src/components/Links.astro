@@ -2,12 +2,12 @@
 import { Icon } from 'astro-icon/components';
 
 export interface Props {
-	social: {
+	social: Array<{
 		name: string;
 		url: string;
 		icon?: string;
 		pack?: string;
-	}[];
+	}>;
 }
 
 const { social } = Astro.props;

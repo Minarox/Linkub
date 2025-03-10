@@ -1,16 +1,21 @@
-<p align="center">
-  <img src=".github/logo.svg" width="112px">
-</p>
-
-<h1 align="center">Linkub</h1>
-
-[Linkub](https://github.com/Minarox/Linkub) is a simple web page that lists all your links to other sites. ([Demo »](https://minarox.github.com/Linkub))
-
 <div align="center">
-  <img src="/.github/screenshot.webp" width="80%">
-</div>
+  <img src=".github/logo.svg" width="112px">
 
-<sub>If you like this project, please star it & [follow me](https://github.com/Minarox) to see what other cool projects I'm working on! ❤️</sub>
+  <h1>Linkub</h1>
+
+  <a href="https://github.com/Minarox/Linkub">Linkub</a> is a simple web page that lists all your links to other sites. <br />
+  <a href="https://minarox.github.com/Linkub"><b>Demo »</b></a>
+
+  <div align="center">
+    <a href="https://minarox.github.com/Linkub">
+      <img src=".github/screenshot.webp" width="80%">
+    </a>
+  </div>
+
+  <sub>
+    If you like this project, please star it & <a href="https://github.com/Minarox">follow me</a> to see what other cool projects I'm working on! ❤️
+  </sub>
+</div>
 
 ## ⭐️ Features
 
@@ -22,29 +27,63 @@
 ## 🚦 3-step setup
 
 1. Clone template
-    ```bash
-        git clone https://github.com/Minarox/Linkub
-        cd Linkub
-        pnpm install
+
+    ```
+      git clone https://github.com/Minarox/Linkub
+      cd Linkub
     ```
 
-    You can also use built-in GitHub template feature to clone this repository on your account.
+    It is highly recommended to launch the project in the devcontainer to have a pre-configured development environment with dependencies.
 
 2. Edit project (variables and assets)
 
-    **(To finish)**
+    There are two important places to quickly customize the project: `src/assets` and `src/pages/index.astro`.
+
+    - **src/assets**
+
+      This folder contains the logo and background image used on the page, in SVG format.
+
+    - **src/pages/index.astro**
+
+      This file contains the main configuration to modify for customizing the title, SEO elements, and links displayed on the page:
+      
+      ```javascript
+        // Website title
+        const title = "Linkub";
+        
+        // SEO
+        const description = "All links in one place.";
+        const keywords = "Linkhub, Link, social media, hub, landing page, web";
+        const creator = "Minarox";
+        
+        // Links
+        const social = [
+          {
+            name: "YouTube",
+            url: "https://youtube.com"
+          },
+          {
+            name: "Email",
+            url: "mailto:contact@example.com",
+            // More details in Q&A
+            icon: "envelope",
+            pack: "mdi"
+          }
+          ...
+        ]
+      ```
 
 3. Build static files
 
     Generate website from source files: `pnpm build`.
 
     Congratulation, you have now a landing page with all of your links.  
-    The final website is located inside `/build` and is ready to deploy online!
+    The final website is located inside `build/` and is ready to deploy online!
 
 ## ⚙️ Scripts
 
-This project use [pnpm](https://pnpm.io/) as package manager.
-You can also continue to use [npm](https://www.npmjs.com/) but you have to adapt commands from documentation to make it work properly.
+This project use [pnpm](https://pnpm.io/) as package manager.  
+You can also use [npm](https://www.npmjs.com/) but you have to edit commands from documentation to make it work properly.
 
 ### dev
 
@@ -62,19 +101,19 @@ Scan all source files and search for TypeScript warnings and errors.
 
 Command: `pnpm build`
 
-Build static pages from source files in `/build` folder.
+Build static pages from source files in `build/` folder.
 
 ### preview
 
 Command: `pnpm preview`
 
-Start Astro web server to preview static pages (`/build`) at [http://localhost:4321](http://localhost:4321).
+Start Astro web server to preview static pages (`build/`) at [http://localhost:4321](http://localhost:4321).
 
 ### test
 
 Default: `pnpm test`
 
-One time run of all tests inside `/test` folder with complete code coverage.
+One time run of all tests inside `test/` folder with complete code coverage.
 
 ### coverage
 
@@ -82,16 +121,26 @@ Default: `pnpm coverage`
 
 Start Vite web server to preview coverage report at [http://localhost:4173](http://localhost:4173).
 
-## 💁‍♀️ FAQ
+## 💁‍♀️ Q&A
 
-### Can I use this for non-published projects?
-Yes. All you need to do is specify distribution files in the `files` array in `package.json`.
+### How are the links constructed?
 
-### How is this different from [size-limit-action](https://github.com/marketplace/actions/size-limit-action)?
+The list of links is constructed by following an array of objects:
 
-[size-limit-action](https://github.com/marketplace/actions/size-limit-action) approaches size monitoring from a budgeting standpoint, and has features such as rejecting PRs if the proposed changes are too large. It requires specifying each distribution file and doesn't show compression sizes.
+```
+  name: string;
+  url: string;
+  icon?: string;
+  pack?: string;
+```
 
-**pkg-size-action** accepts that size increases can be often warranted if the feature/bug-fix is important, and approaches monitoring from a purely informational standpoint. It encourages being size conscious without blocking your changes. pkg-size-action can also automatically detect distribution files based on your `package.json` configuration.
+The `name` and `url` associated with the link are required.  
+The icons used come from the [@iconify-json/fa6-brands](https://icon-sets.iconify.design/fa6-brands/?keyword=fa6) icon pack, using the link name by default to select the displayed icon.
+
+If the default behavior does not suit you, you can force a different icon only from the [@iconify-json/fa6-brands](https://icon-sets.iconify.design/fa6-brands/?keyword=fa6) icon pack by specifying the `icon` field.
+
+If you want to use another icon pack from [iconify](https://icon-sets.iconify.design/), you must use `icon` and `pack` together.  
+Also, remember to install the library with `pnpm install @iconify-json/...` in the project and restart any instance of Astro previously running.
 
 ## 💼 License
 

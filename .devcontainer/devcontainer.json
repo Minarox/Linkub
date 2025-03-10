@@ -2,7 +2,9 @@
    "name": "Linkub",
    "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
    "features": {
-      "ghcr.io/devcontainers-extra/features/pnpm:2": {},
+      "ghcr.io/devcontainers-extra/features/pnpm:2": {
+         "version": "10"
+      },
       "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
         "packages": "gnupg2"
     }

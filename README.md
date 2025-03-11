@@ -1,5 +1,5 @@
 <div align="center">
-  <img src=".github/logo.svg" width="112px">
+  <img src=".github/logo.svg" alt="Linkhub logo" width="112px">
 
   <h1>Linkub</h1>
 
@@ -8,7 +8,7 @@
 
   <div align="center">
     <a href="https://minarox.github.com/Linkub">
-      <img src=".github/screenshot.webp" width="80%">
+      <img src=".github/screenshot.webp" alt="Linkub demo screenshoot" width="80%">
     </a>
   </div>
 
@@ -28,7 +28,7 @@
 
 1. Clone template
 
-    ```
+    ```bash
       git clone https://github.com/Minarox/Linkub
       cd Linkub
     ```
@@ -46,7 +46,7 @@
     - **src/pages/index.astro**
 
       This file contains the main configuration to modify for customizing the title, SEO elements, and links displayed on the page:
-      
+
       ```javascript
         // Website title
         const title = "Linkub";
@@ -131,7 +131,7 @@ I needed a simple, lightweight, and easily customizable template to deploy for s
 
 The list of links is constructed by following an array of objects:
 
-```
+```typescript
   name: string;
   url: string;
   icon?: string;
@@ -152,7 +152,6 @@ By default, the project includes a workflow to automate the deployment of the we
 
 If you want to deploy the website elsewhere, you need to build the project with the command `pnpm build` and deploy the files from `build/` to any web hosting platform that supports static websites.
 Please refer directly to the documentation of the relevant platforms.
-
 
 ## 💼 License
 

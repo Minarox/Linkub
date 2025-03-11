@@ -9,6 +9,7 @@ const title: LayoutProps['title'] = "Linkub";
 const description: LayoutProps['description'] = "All links in one place.";
 const keywords: LayoutProps['keywords'] = "Linkhub, Link, social media, hub, landing page, web";
 const creator: LayoutProps['creator'] = "Minarox";
+const color: LayoutProps['color'] = "#0C1136";
 const social: LinksProps['social'] = [
 	{
 		name: "YouTube",
@@ -40,7 +41,7 @@ const social: LinksProps['social'] = [
 ]
 ---
 
-<Layout title={title} description={description} keywords={keywords} creator={creator}>
+<Layout title={title} description={description} keywords={keywords} creator={creator} color={color}>
 	<main>
 		<header>
 			<Image src={Logo} alt={`${title} logo`} width="140" />
@@ -48,7 +49,7 @@ const social: LinksProps['social'] = [
 		</header>
 
 		<article>
-			<Links social={social} />
+			<Links social={social} hoverColor={color} />
 		</article>
 	</main>
 </Layout>

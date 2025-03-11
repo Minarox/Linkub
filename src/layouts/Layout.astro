@@ -9,9 +9,10 @@ export interface Props {
 	description: string;
 	keywords: string;
 	creator: string;
+	color: string;
 }
 
-const { title, description, keywords, creator } = Astro.props;
+const { title, description, keywords, creator, color } = Astro.props;
 const background: string = `url(${Background.src})`;
 const baseUrl: string = import.meta.env.BASE_URL;
 ---
@@ -57,7 +58,7 @@ const baseUrl: string = import.meta.env.BASE_URL;
 				],
 				meta: [
 				{ name: "viewport", content: "width=device-width,initial-scale=1.0" },
-				{ name: "theme-color", content: "#0C1136" },
+				{ name: "theme-color", content: color },
 				{ name: "keywords", content: keywords },
 				{ name: "robots", content: "index, follow" },
 				{ name: "language", content: "English" },
@@ -95,7 +96,7 @@ const baseUrl: string = import.meta.env.BASE_URL;
 	</body>
 </html>
 
-<style lang="scss" define:vars={{ background }}>
+<style lang="scss" define:vars={{ background, color }}>
 	* {
 		margin: 0;
 		padding: 0;
@@ -139,7 +140,7 @@ const baseUrl: string = import.meta.env.BASE_URL;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-attachment: fixed;
-		background-color: #0C1136;
+		background-color: var(--color);
 
 		img {
 			-webkit-user-drag: none;

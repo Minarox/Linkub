@@ -90,7 +90,7 @@ You can also use [npm](https://www.npmjs.com) but you have to edit commands from
 
 Command: `pnpm dev`
 
-Start Astro web development server at [http://localhost:4321](http://localhost:4321).
+Start Astro web development server at [http://localhost:4321/Linkub](http://localhost:4321/Linkub).
 
 ### check
 
@@ -108,7 +108,7 @@ Build static pages from source files in `build/` folder.
 
 Command: `pnpm preview`
 
-Start Astro web server to preview static pages (`build/`) at [http://localhost:4321](http://localhost:4321).
+Start Astro web server to preview static pages (`build/`) at [http://localhost:4321/Linkub](http://localhost:4321/Linkub).
 
 ### test
 

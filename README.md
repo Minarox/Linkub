@@ -55,6 +55,7 @@
         const description = "All links in one place.";
         const keywords = "Linkhub, Link, social media, hub, landing page, web";
         const creator = "Minarox";
+        const color = "#0C1136";
         
         // Links
         const social = [
@@ -89,7 +90,7 @@ You can also use [npm](https://www.npmjs.com/) but you have to edit commands fro
 
 Command: `pnpm dev`
 
-Start Astro web development server at [http://localhost:4321](http://localhost:4321).
+Start Astro web development server at [http://localhost:4321/linkub](http://localhost:4321/linkub).
 
 ### check
 
@@ -107,7 +108,7 @@ Build static pages from source files in `build/` folder.
 
 Command: `pnpm preview`
 
-Start Astro web server to preview static pages (`build/`) at [http://localhost:4321](http://localhost:4321).
+Start Astro web server to preview static pages (`build/`) at [http://localhost:4321/linkub](http://localhost:4321/linkub).
 
 ### test
 
@@ -148,7 +149,7 @@ Also, remember to install the library with `pnpm install @iconify-json/...` in t
 
 ### How do I deploy the project?
 
-By default, the project includes a workflow to automate the deployment of the website on GitHub Pages from the main branch.
+By default, the project includes a workflow to automate the deployment of the website on GitHub Pages from the main branch, but you need to change the Astro configuration to match the final URL.
 
 If you want to deploy the website elsewhere, you need to build the project with the command `pnpm build` and deploy the files from `build/` to any web hosting platform that supports static websites.
 Please refer directly to the documentation of the relevant platforms.

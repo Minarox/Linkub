@@ -10,5 +10,8 @@ export default defineConfig({
     site: "https://minarox.github.com",
     base: "/linkub",
     outDir: "./build",
-    integrations: [sitemap(), metaTags(), icon(), compressor({ gzip: false })]
+    integrations: [sitemap(), metaTags(), icon(), compressor({ gzip: false })],
+    server: {
+        host: "127.0.0.1"
+    }
 });

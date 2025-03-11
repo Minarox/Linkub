@@ -37,7 +37,7 @@ It is highly recommended to launch the project in the devcontainer to have a pre
 
 ### 2. Edit project (variables and assets)
 
-There are two important places to quickly customize the project: `src/assets` and `src/pages/index.astro`.
+There are two important places to quickly customize the project: `src/assets/svg` and `src/pages/index.astro`.
 
 - **src/assets**
 
@@ -83,14 +83,14 @@ The final website is located inside `build/` and is ready to deploy online!
 
 ## ⚙️ Scripts
 
-This project use [pnpm](https://pnpm.io/) as package manager.  
-You can also use [npm](https://www.npmjs.com/) but you have to edit commands from documentation to make it work properly.
+This project use [pnpm](https://pnpm.io) as package manager.  
+You can also use [npm](https://www.npmjs.com) but you have to edit commands from documentation to make it work properly.
 
 ### dev
 
 Command: `pnpm dev`
 
-Start Astro web development server at [http://localhost:4321/linkub](http://localhost:4321/linkub).
+Start Astro web development server at [http://localhost:4321](http://localhost:4321).
 
 ### check
 
@@ -108,7 +108,7 @@ Build static pages from source files in `build/` folder.
 
 Command: `pnpm preview`
 
-Start Astro web server to preview static pages (`build/`) at [http://localhost:4321/linkub](http://localhost:4321/linkub).
+Start Astro web server to preview static pages (`build/`) at [http://localhost:4321](http://localhost:4321).
 
 ### test
 

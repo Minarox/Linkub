@@ -2,21 +2,14 @@ import { test, expect } from 'vitest';
 import { experimental_AstroContainer as AstroContainer } from 'astro/container';
 import Layout, { type Props as LayoutProps } from '@layouts/Layout.astro';
 
-export type Props = {
-    title: string;
-    description: string;
-    keywords: string;
-    creator: string;
-    [key: string]: any;
-};
-
 test('Main layout', async () => {
 	const container: AstroContainer = await AstroContainer.create();
 	const props: LayoutProps = {
 		title: 'Linkub',
 		description: 'All links in one place.',
 		keywords: 'Linkhub, Link, social media, hub, landing page, web',
-		creator: 'Minarox'
+		creator: 'Minarox',
+		color: '#0C1136'
 	};
 	const component: Response = await container.renderToResponse(Layout, {
 		props: { ...props }
@@ -35,5 +28,6 @@ test('Main layout', async () => {
 	expect(body).toContain(`<meta name="twitter:description" content="${props.description}">`);
 	// expect(body).toContain('<meta name="twitter:image" content="/banner.png">');
 	expect(body).toContain(`<meta name="twitter:image:alt" content="${props.title} banner">`);
+	expect(body).toContain(`<meta name="theme-color" content="${props.color}">`);
 	expect(body).toContain('<link rel="sitemap" href="/sitemap-index.xml">');
 })

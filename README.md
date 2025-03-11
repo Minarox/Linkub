@@ -8,7 +8,7 @@
 
   <div align="center">
     <a href="https://minarox.github.com/Linkub">
-      <img src=".github/screenshot.webp" alt="Linkub demo screenshoot" width="80%">
+      <img src=".github/screenshot.webp" alt="Linkub demo screenshoot">
     </a>
   </div>
 

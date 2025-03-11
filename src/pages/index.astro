@@ -1,0 +1,80 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Logo from '@assets/logo.svg';
+import Links, { type Props as LinksProps } from '@components/Links.astro';
+import { type Props as LayoutProps } from '@layouts/Layout.astro';
+
+const title: LayoutProps['title'] = "Linkub";
+const description: LayoutProps['description'] = "All links in one place.";
+const keywords: LayoutProps['keywords'] = "Linkhub, Link, social media, hub, landing page, web";
+const creator: LayoutProps['creator'] = "Minarox";
+const color: LayoutProps['color'] = "#0C1136";
+const social: LinksProps['social'] = [
+	{
+		name: "YouTube",
+		url: "https://youtube.com"
+	},
+	{
+		name: "Twitch",
+		url: "https://twitch.tv"
+	},
+	{
+		name: "X",
+		url: "https://x.com",
+		icon: "x-twitter"
+	},
+	{
+		name: "Instagram",
+		url: "https://instagram.com"
+	},
+	{
+		name: "GitHub",
+		url: "https://github.com"
+	},
+	{
+		name: "Email",
+		url: "mailto:contact@example.com",
+		icon: "envelope",
+		pack: "mdi"
+	}
+]
+---
+
+<Layout title={title} description={description} keywords={keywords} creator={creator} color={color}>
+	<main>
+		<header>
+			<Image src={Logo} alt={`${title} logo`} width="140" />
+			<h1>{title}</h1>
+		</header>
+
+		<article>
+			<Links social={social} hoverColor={color} />
+		</article>
+	</main>
+</Layout>
+
+<style lang="scss">
+	main {
+		width: 100vw;
+		height: 100vh;
+		display: grid;
+		grid-template-rows: 0.6fr 1fr;
+		align-items: center;
+		justify-items: center;
+
+		header {
+			padding: 1rem;
+
+			img {
+				padding: 0.5rem;
+			}
+
+			h1 {
+				margin: 0;
+				font-size: 2em;
+				font-weight: 700;
+			}
+		}
+	}
+</style>

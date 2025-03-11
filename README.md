@@ -26,60 +26,60 @@
 
 ## 🚦 3-step setup
 
-1. Clone template
+### 1. Clone template
 
-    ```bash
-      git clone https://github.com/Minarox/Linkub
-      cd Linkub
-    ```
+```bash
+  git clone https://github.com/Minarox/Linkub
+  cd Linkub
+```
 
-    It is highly recommended to launch the project in the devcontainer to have a pre-configured development environment with dependencies.
+It is highly recommended to launch the project in the devcontainer to have a pre-configured development environment with dependencies.
 
-2. Edit project (variables and assets)
+### 2. Edit project (variables and assets)
 
-    There are two important places to quickly customize the project: `src/assets` and `src/pages/index.astro`.
+There are two important places to quickly customize the project: `src/assets` and `src/pages/index.astro`.
 
-    - **src/assets**
+- **src/assets**
 
-      This folder contains the logo and background image used on the page, in SVG format.
+  This folder contains the logo and background image used on the page, in SVG format.
 
-    - **src/pages/index.astro**
+- **src/pages/index.astro**
 
-      This file contains the main configuration to modify for customizing the title, SEO elements, and links displayed on the page:
+  This file contains the main configuration to modify for customizing the title, SEO elements, and links displayed on the page:
 
-      ```javascript
-        // Website title
-        const title = "Linkub";
-        
-        // SEO
-        const description = "All links in one place.";
-        const keywords = "Linkhub, Link, social media, hub, landing page, web";
-        const creator = "Minarox";
-        const color = "#0C1136";
-        
-        // Links
-        const social = [
-          {
-            name: "GitHub",
-            url: "https://github.com"
-          },
-          {
-            name: "Email",
-            url: "mailto:contact@example.com",
-            // More details in Q&A
-            icon: "envelope",
-            pack: "mdi"
-          }
-          ...
-        ]
-      ```
+  ```javascript
+    // Website title
+    const title = "Linkub";
+    
+    // SEO
+    const description = "All links in one place.";
+    const keywords = "Linkhub, Link, social media, hub, landing page, web";
+    const creator = "Minarox";
+    const color = "#0C1136";
+    
+    // Links
+    const social = [
+      {
+        name: "GitHub",
+        url: "https://github.com"
+      },
+      {
+        name: "Email",
+        url: "mailto:contact@example.com",
+        // More details in Q&A
+        icon: "envelope",
+        pack: "mdi"
+      }
+      ...
+    ]
+  ```
 
-3. Build static files
+### 3. Build static files
 
-    Generate website from source files: `pnpm build`.
+Ensure that the URL specified in the Astro configuration (`astro.config.mts`) matches the expected URL and generate the website from source files: `pnpm build`.
 
-    Congratulation, you have now a landing page with all of your links.  
-    The final website is located inside `build/` and is ready to deploy online!
+Congratulation, you have now a landing page with all of your links.  
+The final website is located inside `build/` and is ready to deploy online!
 
 ## ⚙️ Scripts
 
@@ -149,7 +149,7 @@ Also, remember to install the library with `pnpm install @iconify-json/...` in t
 
 ### How do I deploy the project?
 
-By default, the project includes a workflow to automate the deployment of the website on GitHub Pages from the main branch, but you need to change the Astro configuration to match the final URL.
+By default, the project includes a workflow to automate the deployment of the website on GitHub Pages from the main branch, but you need to change the Astro configuration (`astro.config.mts`) to match the expected URL.
 
 If you want to deploy the website elsewhere, you need to build the project with the command `pnpm build` and deploy the files from `build/` to any web hosting platform that supports static websites.
 Please refer directly to the documentation of the relevant platforms.

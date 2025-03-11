@@ -29,8 +29,15 @@
             "esbenp.prettier-vscode",
             "rvest.vs-code-prettier-eslint",
             "GitHub.copilot",
-            "GitHub.copilot-chat"
-         ]
+            "GitHub.copilot-chat",
+            "DavidAnson.vscode-markdownlint"
+         ],
+         "settings": {
+            "markdownlint.config": {
+               "no-inline-html": false,
+               "first-line-h1": false
+            }
+         }
       }
    }
 }

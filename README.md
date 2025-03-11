@@ -4,10 +4,10 @@
   <h1>Linkub</h1>
 
   <a href="https://github.com/Minarox/Linkub">Linkub</a> is a simple web page that lists all your links to other sites. <br />
-  <a href="https://minarox.github.com/Linkub"><b>Demo »</b></a>
+  <a href="https://minarox.github.io/Linkub"><b>Demo »</b></a>
 
   <div align="center">
-    <a href="https://minarox.github.com/Linkub">
+    <a href="https://minarox.github.io/Linkub">
       <img src=".github/screenshot.webp" alt="Linkub demo screenshoot">
     </a>
   </div>

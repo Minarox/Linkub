@@ -30,8 +30,8 @@ importers:
         specifier: ^1.1.5
         version: 1.1.5
       astro-meta-tags:
-        specifier: ^0.3.1
-        version: 0.3.1(astro@5.7.10(@types/node@22.15.3)(rollup@4.40.1)(sass@1.87.0)(typescript@5.8.2)(yaml@2.7.1))
+        specifier: ^0.3.2
+        version: 0.3.2(astro@5.7.10(@types/node@22.15.3)(rollup@4.40.1)(sass@1.87.0)(typescript@5.8.2)(yaml@2.7.1))
       astro-seo:
         specifier: ^0.8.4
         version: 0.8.4(typescript@5.8.2)
@@ -957,8 +957,8 @@ packages:
   astro-icon@1.1.5:
     resolution: {integrity: sha512-CJYS5nWOw9jz4RpGWmzNQY7D0y2ZZacH7atL2K9DeJXJVaz7/5WrxeyIxO8KASk1jCM96Q4LjRx/F3R+InjJrw==}
 
-  astro-meta-tags@0.3.1:
-    resolution: {integrity: sha512-6g/SfAVTV7BsGlfWU+s/Kvo6atyn9DpfI7Dq3fE/ck3ppfg30aoeT2Uxu7UH4yla3QXAUWaJIher7fGjewf0ew==}
+  astro-meta-tags@0.3.2:
+    resolution: {integrity: sha512-T2jO2WrA6970265xSYFgZD/JprPXYlmqVqj16yCdvi2OsRNWIRYzyBASPSY3SZxR9L+gGct1Nk8YnYVK21BPiA==}
     peerDependencies:
       astro: ^4.0.0 || ^5.0.0-beta.0
 
@@ -3527,7 +3527,7 @@ snapshots:
       - debug
       - supports-color
 
-  astro-meta-tags@0.3.1(astro@5.7.10(@types/node@22.15.3)(rollup@4.40.1)(sass@1.87.0)(typescript@5.8.2)(yaml@2.7.1)):
+  astro-meta-tags@0.3.2(astro@5.7.10(@types/node@22.15.3)(rollup@4.40.1)(sass@1.87.0)(typescript@5.8.2)(yaml@2.7.1)):
     dependencies:
       astro: 5.7.10(@types/node@22.15.3)(rollup@4.40.1)(sass@1.87.0)(typescript@5.8.2)(yaml@2.7.1)
 

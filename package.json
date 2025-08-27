@@ -38,7 +38,7 @@
         "astro-icon": "^1.1.5",
         "astro-meta-tags": "^0.3.2",
         "astro-seo": "^0.8.4",
-        "sass": "^1.90.0",
+        "sass": "^1.91.0",
         "sharp": "^0.34.3"
     },
     "devDependencies": {

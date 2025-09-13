@@ -45,9 +45,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^3.2.4
         version: 3.2.4(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.3.3)(sass@1.92.1)(yaml@2.8.1))
-      vite:
-        specifier: ^7.1.5
-        version: 7.1.5(@types/node@24.3.3)(sass@1.92.1)(yaml@2.8.1)
       vitest:
         specifier: ^3.2.4
         version: 3.2.4(@types/debug@4.1.12)(@types/node@24.3.3)(sass@1.92.1)(yaml@2.8.1)
@@ -2327,46 +2324,6 @@ packages:
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
 
-  vite@6.3.6:
-    resolution: {integrity: sha512-0msEVHJEScQbhkbVTb/4iHZdJ6SXp/AvxL2sjwYQFfBqleHtnCqv1J3sa9zbWz/6kW1m9Tfzn92vW+kZ1WV6QA==}
-    engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': ^18.0.0 || ^20.0.0 || >=22.0.0
-      jiti: '>=1.21.0'
-      less: '*'
-      lightningcss: ^1.21.0
-      sass: '*'
-      sass-embedded: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.16.0
-      tsx: ^4.8.1
-      yaml: ^2.4.2
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      jiti:
-        optional: true
-      less:
-        optional: true
-      lightningcss:
-        optional: true
-      sass:
-        optional: true
-      sass-embedded:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-      tsx:
-        optional: true
-      yaml:
-        optional: true
-
   vite@7.1.5:
     resolution: {integrity: sha512-4cKBO9wR75r0BeIWWWId9XK9Lj6La5X846Zw9dFfzMRw38IlTk2iCcUt6hsyiDRcPidc55ZParFYDXi0nXOeLQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -3525,8 +3482,8 @@ snapshots:
       unist-util-visit: 5.0.0
       unstorage: 1.17.1
       vfile: 6.0.3
-      vite: 6.3.6(@types/node@24.3.3)(sass@1.92.1)(yaml@2.8.1)
-      vitefu: 1.1.1(vite@6.3.6(@types/node@24.3.3)(sass@1.92.1)(yaml@2.8.1))
+      vite: 7.1.5(@types/node@24.3.3)(sass@1.92.1)(yaml@2.8.1)
+      vitefu: 1.1.1(vite@7.1.5(@types/node@24.3.3)(sass@1.92.1)(yaml@2.8.1))
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.3
@@ -5305,20 +5262,6 @@ snapshots:
       - tsx
       - yaml
 
-  vite@6.3.6(@types/node@24.3.3)(sass@1.92.1)(yaml@2.8.1):
-    dependencies:
-      esbuild: 0.25.9
-      fdir: 6.5.0(picomatch@4.0.3)
-      picomatch: 4.0.3
-      postcss: 8.5.6
-      rollup: 4.50.1
-      tinyglobby: 0.2.15
-    optionalDependencies:
-      '@types/node': 24.3.3
-      fsevents: 2.3.3
-      sass: 1.92.1
-      yaml: 2.8.1
-
   vite@7.1.5(@types/node@24.3.3)(sass@1.92.1)(yaml@2.8.1):
     dependencies:
       esbuild: 0.25.9
@@ -5333,9 +5276,9 @@ snapshots:
       sass: 1.92.1
       yaml: 2.8.1
 
-  vitefu@1.1.1(vite@6.3.6(@types/node@24.3.3)(sass@1.92.1)(yaml@2.8.1)):
+  vitefu@1.1.1(vite@7.1.5(@types/node@24.3.3)(sass@1.92.1)(yaml@2.8.1)):
     optionalDependencies:
-      vite: 6.3.6(@types/node@24.3.3)(sass@1.92.1)(yaml@2.8.1)
+      vite: 7.1.5(@types/node@24.3.3)(sass@1.92.1)(yaml@2.8.1)
 
   vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.3.3)(sass@1.92.1)(yaml@2.8.1):
     dependencies:

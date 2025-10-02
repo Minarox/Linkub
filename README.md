@@ -92,6 +92,13 @@ The final website is located inside `build/` and is ready to deploy online!
 - [Iconify](https://iconify.design/)
 - [Vitest](https://vitest.dev/)
 
+## 🎨 Color Reference
+
+| Color                        | Hex                                                                    | Description                   |
+| :--------------------------- | :--------------------------------------------------------------------- |:----------------------------- |
+| Text color                   | ![#FFFFFFFF](https://placehold.co/15x15/FFFFFF/FFFFFF.png) `#FFFFFFFF` | Titles and subtitles          |
+| Background color             | ![#0C1136FF](https://placehold.co/15x15/0C1136/0C1136.png) `#0C1136FF` | Global background             |
+
 ## ⚙️ Scripts
 
 This project use [pnpm](https://pnpm.io) as package manager.
@@ -102,10 +109,10 @@ You can also use [npm](https://www.npmjs.com) but you have to edit commands from
 | `pnpm install`    | Installs dependencies                                     |
 | `pnpm dev`        | Starts local dev server at `localhost:4321`               |
 | `pnpm check`      | Scan source files for warnings and errors                 |
-| `pnpm build`      | Build your production site to `./dist/`                   |
-| `pnpm preview`    | Preview your build locally at `localhost:4321`            |
 | `pnpm test`       | Run unit tests                                            |
 | `pnpm coverage`   | Preview code coverage from unit tests at `localhost:4173` |
+| `pnpm build`      | Build your production site to `build/`                    |
+| `pnpm preview`    | Preview your build locally at `localhost:4321`            |
 
 ## 💁‍♀️ Q&A
 

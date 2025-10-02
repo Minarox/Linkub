@@ -7,7 +7,6 @@ export default getViteConfig({
         include: ["test/**/*.test.ts"],
         exclude: [...configDefaults.exclude],
         coverage: {
-            reportsDirectory: "./coverage/dist",
             reporter: ["text", "html", "json-summary", "json"],
             include: ["src/**/*"],
             reportOnFailure: true,

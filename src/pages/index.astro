@@ -1,16 +1,20 @@
 ---
-import Layout from '@layouts/Layout.astro';
-import { Image } from 'astro:assets';
-import Logo from '@assets/svg/logo.svg';
-import Links, { type Props as LinksProps } from '@components/Links.astro';
-import { type Props as LayoutProps } from '@layouts/Layout.astro';
+import { Image } from "astro:assets"
+import Layout, { type Props as LayoutProps } from "@layouts/Layout.astro"
+import Links, { type Props as LinksProps } from "@components/Links.astro"
+import Logo from "@assets/svg/logo.svg"
+import Background from "@assets/svg/background.svg"
 
-const title: LayoutProps['title'] = "Linkub";
-const description: LayoutProps['description'] = "All links in one place.";
-const keywords: LayoutProps['keywords'] = "Linkhub, Link, social media, hub, landing page, web";
-const creator: LayoutProps['creator'] = "Minarox";
-const color: LayoutProps['color'] = "#0C1136";
-const social: LinksProps['social'] = [
+const lang: LayoutProps["lang"] = ["en", "en-US", "English"]
+const title: LayoutProps["title"] = "Linkub"
+const description: LayoutProps["description"] = "All links in one place."
+const keywords: LayoutProps["keywords"] = "Linkhub, Link, Social, Media, Hub, Landing, Page, Web"
+const creator: LayoutProps["creator"] = "Mathis Serrieres Maniecki"
+const xCreator: LayoutProps["xCreator"] = "Minarox_"
+const themeColor: LayoutProps["themeColor"] = "#0C1136"
+const thumbnail: LayoutProps["thumbnail"] = Background
+
+const social: LinksProps["social"] = [
 	{
 		name: "YouTube",
 		url: "https://youtube.com"
@@ -41,7 +45,7 @@ const social: LinksProps['social'] = [
 ]
 ---
 
-<Layout title={title} description={description} keywords={keywords} creator={creator} color={color}>
+<Layout lang={lang} title={title} description={description} keywords={keywords} creator={creator} xCreator={xCreator} themeColor={themeColor} thumbnail={thumbnail}>
 	<main>
 		<header>
 			<Image src={Logo} alt={`${title} logo`} width="140" />
@@ -49,12 +53,12 @@ const social: LinksProps['social'] = [
 		</header>
 
 		<article>
-			<Links social={social} hoverColor={color} />
+			<Links social={social} />
 		</article>
 	</main>
 </Layout>
 
-<style lang="scss">
+<style>
 	main {
 		width: 100vw;
 		height: 100vh;

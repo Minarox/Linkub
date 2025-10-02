@@ -1,16 +1,22 @@
 ---
-import Layout from '@layouts/Layout.astro';
-import { Image } from 'astro:assets';
-import Logo from '@assets/svg/logo.svg';
-import Links, { type Props as LinksProps } from '@components/Links.astro';
-import { type Props as LayoutProps } from '@layouts/Layout.astro';
+import Layout from "@layouts/Layout.astro"
+import Links from "@components/Links.astro"
+import Logo from "@assets/svg/logo.svg"
+import Background from "@assets/svg/background.svg"
+import type { Settings, Link } from "@types"
 
-const title: LayoutProps['title'] = "Linkub";
-const description: LayoutProps['description'] = "All links in one place.";
-const keywords: LayoutProps['keywords'] = "Linkhub, Link, social media, hub, landing page, web";
-const creator: LayoutProps['creator'] = "Minarox";
-const color: LayoutProps['color'] = "#0C1136";
-const social: LinksProps['social'] = [
+const settings: Settings = {
+	lang: ["en", "en-US", "English"],
+	title: "Linkub",
+	description: "All links in one place.",
+	keywords: "Linkhub, Link, Social, Media, Hub, Landing, Page, Web",
+	creator: "Mathis Serrieres Maniecki",
+	xCreator: "Minarox_",
+	themeColor: "#0C1136",
+	thumbnail: Background
+}
+
+const links: Link[] = [
 	{
 		name: "YouTube",
 		url: "https://youtube.com"
@@ -41,20 +47,20 @@ const social: LinksProps['social'] = [
 ]
 ---
 
-<Layout title={title} description={description} keywords={keywords} creator={creator} color={color}>
+<Layout settings={settings}>
 	<main>
 		<header>
-			<Image src={Logo} alt={`${title} logo`} width="140" />
-			<h1>{title}</h1>
+			<Logo />
+			<h1>{settings.title}</h1>
 		</header>
 
 		<article>
-			<Links social={social} hoverColor={color} />
+			<Links links={links} />
 		</article>
 	</main>
 </Layout>
 
-<style lang="scss">
+<style>
 	main {
 		width: 100vw;
 		height: 100vh;
@@ -66,8 +72,13 @@ const social: LinksProps['social'] = [
 		header {
 			padding: 1rem;
 
-			img {
+			svg {
+				width: auto;
+				max-width: 140px;
+				height: auto;
+				max-height: 140px;
 				padding: 0.5rem;
+				color: white;
 			}
 
 			h1 {

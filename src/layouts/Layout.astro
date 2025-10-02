@@ -1,69 +1,64 @@
 ---
-import { SEO } from "astro-seo";
-import { AstroFont } from "astro-font";
-import Logo from "@assets/svg/logo.svg";
-import Background from "@assets/svg/background.svg";
-import LatoRegular from "@assets/font/Lato-Regular.ttf";
-import LatoBold from "@assets/font/Lato-Bold.ttf";
+import { SEO } from "astro-seo"
+import { AstroFont } from "astro-font"
+import Logo from "@assets/svg/logo.svg"
+import Background from "@assets/svg/background.svg"
+import LatoRegular from "@assets/font/Lato-Regular.ttf"
+import LatoBold from "@assets/font/Lato-Bold.ttf"
+import type { Settings } from "@types"
 
-export interface Props {
-	title: string;
-	description: string;
-	keywords: string;
-	creator: string;
-	color: string;
-}
-
-const { title, description, keywords, creator, color } = Astro.props;
-const background: string = `url(${Background.src})`;
+const { lang, title, description, keywords, creator, xCreator, themeColor, thumbnail } = Astro.props.settings as Settings
+const background: string = `url(${Background.src})`
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang[0] || "en"}>
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 		<SEO
-			title={title}
+			title={`${title} - ${description}`}
 			description={description}
 			charset="UTF-8"
 			openGraph={{
 				basic: {
-					title: title,
+					title,
 					type: "website",
 					url: Astro.url.origin,
-					image: Background.src
+					image: thumbnail?.src || Background.src
 				},
 				optional: {
-					locale: "en-US",
+					locale: lang[1] || "en-US",
+					siteName: title,
+					description
 				},
 				image: {
 					alt: `${title} banner`,
-					url: Background.src,
+					url: thumbnail?.src || Background.src,
 					type: "image/webp"
 				}
 			}}
 			twitter={{
-				creator: `@${creator}`,
+				creator: `@${xCreator}`,
 				card: "summary_large_image",
 				site: Astro.url.origin,
-				title: title,
-				description: description,
-				image: Background.src,
-				imageAlt: `${title} banner`,
+				title,
+				description,
+				image: thumbnail?.src || Background.src,
+				imageAlt: `${title} banner`
 			}}
 			extend={{
 				link: [
-				{ rel: "icon", type: "image/svg+xml", href: Logo.src },
-				{ rel: "sitemap", href: "/sitemap-index.xml" },
+					{ rel: "icon", type: "image/svg+xml", href: Logo.src },
+					{ rel: "sitemap", href: "/sitemap-index.xml" }
 				],
 				meta: [
-				{ name: "viewport", content: "width=device-width,initial-scale=1.0" },
-				{ name: "theme-color", content: color },
-				{ name: "keywords", content: keywords },
-				{ name: "robots", content: "index, follow" },
-				{ name: "language", content: "English" },
-				{ name: "author", content: creator }
+					{ name: "viewport", content: "width=device-width, initial-scale=1.0" },
+					{ name: "theme-color", content: themeColor },
+					{ name: "keywords", content: keywords },
+					{ name: "robots", content: "index, follow" },
+					{ name: "language", content: lang[2] || "English" },
+					{ name: "author", content: creator }
 				]
 			}}
 		/>
@@ -97,7 +92,7 @@ const background: string = `url(${Background.src})`;
 	</body>
 </html>
 
-<style lang="scss" define:vars={{ background, color }}>
+<style define:vars={{ background, themeColor }}>
 	* {
 		margin: 0;
 		padding: 0;
@@ -141,7 +136,7 @@ const background: string = `url(${Background.src})`;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-attachment: fixed;
-		background-color: var(--color);
+		background-color: var(--themeColor);
 
 		img {
 			-webkit-user-drag: none;

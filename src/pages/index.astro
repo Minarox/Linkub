@@ -48,7 +48,7 @@ const social: LinksProps["social"] = [
 <Layout lang={lang} title={title} description={description} keywords={keywords} creator={creator} xCreator={xCreator} themeColor={themeColor} thumbnail={thumbnail}>
 	<main>
 		<header>
-			<Image src={Logo} alt={`${title} logo`} width="140" />
+			<Logo />
 			<h1>{title}</h1>
 		</header>
 
@@ -70,8 +70,13 @@ const social: LinksProps["social"] = [
 		header {
 			padding: 1rem;
 
-			img {
+			svg {
+				width: auto;
+				max-width: 140px;
+				height: auto;
+				max-height: 140px;
 				padding: 0.5rem;
+				color: white;
 			}
 
 			h1 {

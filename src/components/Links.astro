@@ -1,23 +1,15 @@
 ---
 import { Icon } from "astro-icon/components"
+import type { Link } from "@types"
 
-export interface Props {
-	social: Array<{
-		name: string
-		url: string
-		icon?: string
-		pack?: string
-	}>
-}
-
-const { social } = Astro.props as Props
+const links = Astro.props.links as Link[]
 ---
 
 <section>
-	{social.map((item) => (
-		<a href={item.url} title={item.name} aria-label={item.name}>
-			<Icon name={`${item.pack || 'fa6-brands'}:${item.icon || item.name.toLowerCase()}`} />
-			<p>{item.name}</p>
+	{links.map((link) => (
+		<a href={link.url} title={link.name} aria-label={link.name}>
+			<Icon name={`${link.pack || 'fa6-brands'}:${link.icon || link.name.toLowerCase()}`} />
+			<p>{link.name}</p>
 		</a>
 	))}
 </section>

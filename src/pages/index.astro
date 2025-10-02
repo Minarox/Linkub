@@ -1,19 +1,22 @@
 ---
-import Layout, { type Props as LayoutProps } from "@layouts/Layout.astro"
-import Links, { type Props as LinksProps } from "@components/Links.astro"
+import Layout from "@layouts/Layout.astro"
+import Links from "@components/Links.astro"
 import Logo from "@assets/svg/logo.svg"
 import Background from "@assets/svg/background.svg"
+import type { Settings, Link } from "@types"
 
-const lang: LayoutProps["lang"] = ["en", "en-US", "English"]
-const title: LayoutProps["title"] = "Linkub"
-const description: LayoutProps["description"] = "All links in one place."
-const keywords: LayoutProps["keywords"] = "Linkhub, Link, Social, Media, Hub, Landing, Page, Web"
-const creator: LayoutProps["creator"] = "Mathis Serrieres Maniecki"
-const xCreator: LayoutProps["xCreator"] = "Minarox_"
-const themeColor: LayoutProps["themeColor"] = "#0C1136"
-const thumbnail: LayoutProps["thumbnail"] = Background
+const settings: Settings = {
+	lang: ["en", "en-US", "English"],
+	title: "Linkub",
+	description: "All links in one place.",
+	keywords: "Linkhub, Link, Social, Media, Hub, Landing, Page, Web",
+	creator: "Mathis Serrieres Maniecki",
+	xCreator: "Minarox_",
+	themeColor: "#0C1136",
+	thumbnail: Background
+}
 
-const social: LinksProps["social"] = [
+const links: Link[] = [
 	{
 		name: "YouTube",
 		url: "https://youtube.com"
@@ -44,15 +47,15 @@ const social: LinksProps["social"] = [
 ]
 ---
 
-<Layout lang={lang} title={title} description={description} keywords={keywords} creator={creator} xCreator={xCreator} themeColor={themeColor} thumbnail={thumbnail}>
+<Layout settings={settings}>
 	<main>
 		<header>
 			<Logo />
-			<h1>{title}</h1>
+			<h1>{settings.title}</h1>
 		</header>
 
 		<article>
-			<Links social={social} />
+			<Links links={links} />
 		</article>
 	</main>
 </Layout>

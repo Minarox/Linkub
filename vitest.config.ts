@@ -1,12 +1,13 @@
 /// <reference types="vitest" />
-import { getViteConfig } from "astro/config";
-import { configDefaults } from "vitest/config";
+import { getViteConfig } from "astro/config"
+import { configDefaults } from "vitest/config"
 
 export default getViteConfig({
     test: {
         include: ["test/**/*.test.ts"],
         exclude: [...configDefaults.exclude],
         coverage: {
+            reportsDirectory: "./coverage/dist",
             reporter: ["text", "html", "json-summary", "json"],
             include: ["src/**/*"],
             reportOnFailure: true,
@@ -18,4 +19,4 @@ export default getViteConfig({
             }
         }
     }
-});
+})

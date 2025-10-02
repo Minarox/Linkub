@@ -1,8 +1,9 @@
 import { test, expect } from "vitest"
 import { experimental_AstroContainer as AstroContainer } from "astro/container"
-import Links, { type Props } from "@components/Links.astro"
+import Links from "@components/Links.astro"
+import { type Link, decodeHTMLEntities } from "@types"
 
-const social: Props["social"] = [
+const links: Link[] = [
 	{
 		name: "YouTube",
 		url: "https://youtube.com/@Minarox"
@@ -22,13 +23,17 @@ const social: Props["social"] = [
 
 test("Array of links", async () => {
 	const container: AstroContainer = await AstroContainer.create()
-	const component: string = await container.renderToString(Links, {
-		props: { social: social }
+	const component: Response = await container.renderToResponse(Links, {
+		props: { links }
 	})
 
-	for (const link of social) {
-		expect(component).toContain(link.name)
-		expect(component).toContain(link.url)
-		expect(component).toContain(`data-icon="${link.pack || 'fa6-brands'}:${link.icon || link.name.toLowerCase()}"`)
+	expect(component.status).toBe(200)
+	expect(component.headers.get("Content-Type")).toBe("text/html")
+
+	const body: string = decodeHTMLEntities(await component.text())
+	for (const link of links) {
+		expect(body).toContain(link.name)
+		expect(body).toContain(link.url)
+		expect(body).toContain(`data-icon="${link.pack || 'fa6-brands'}:${link.icon || link.name.toLowerCase()}"`)
 	}
 })

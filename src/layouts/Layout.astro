@@ -5,19 +5,9 @@ import Logo from "@assets/svg/logo.svg"
 import Background from "@assets/svg/background.svg"
 import LatoRegular from "@assets/font/Lato-Regular.ttf"
 import LatoBold from "@assets/font/Lato-Bold.ttf"
+import type { Settings } from "@types"
 
-export interface Props {
-	lang: string[]
-	title: string
-	description: string
-	keywords: string
-	creator: string
-	xCreator: string
-	themeColor: string
-	thumbnail?: ImageMetadata
-}
-
-const { lang, title, description, keywords, creator, xCreator, themeColor, thumbnail } = Astro.props as Props
+const { lang, title, description, keywords, creator, xCreator, themeColor, thumbnail } = Astro.props.settings as Settings
 const background: string = `url(${Background.src})`
 ---
 

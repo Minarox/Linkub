@@ -18,4 +18,4 @@ export default getViteConfig({
             }
         }
     }
-})
+} as any)

@@ -48,17 +48,22 @@ There are two important places to quickly customize the project: `src/assets/svg
   This file contains the main configuration to modify for customizing the title, SEO elements, and links displayed on the page:
 
   ```javascript
-    // Website title
-    const title = "Linkub";
-    
-    // SEO
-    const description = "All links in one place.";
-    const keywords = "Linkhub, Link, social media, hub, landing page, web";
-    const creator = "Minarox";
-    const color = "#0C1136";
-    
+    const settings = {
+      lang: ["en", "en-US", "English"],
+
+      // Website title
+      title: "Linkub",
+
+      // SEO
+      description = "All links in one place.",
+      keywords = "Linkhub, Link, Social, Media, Hub, Landing, Page, Web",
+      creator = "Mathis Serrieres Maniecki",
+      xCreator = "Minarox_",
+      themeColor = "#0C1136"
+    }
+
     // Links
-    const social = [
+    const links = [
       {
         name: "GitHub",
         url: "https://github.com"
@@ -78,49 +83,36 @@ There are two important places to quickly customize the project: `src/assets/svg
 
 Ensure that the URL specified in the Astro configuration (`astro.config.mts`) matches the expected URL and generate the website from source files: `pnpm build`.
 
-Congratulation, you have now a landing page with all of your links.  
+Congratulation, you have now a landing page with all of your links.
 The final website is located inside `build/` and is ready to deploy online!
+
+## 📚 Tech Stack
+
+- [Astro](https://astro.build/)
+- [Iconify](https://iconify.design/)
+- [Vitest](https://vitest.dev/)
+
+## 🎨 Color Reference
+
+| Color                        | Hex                                                                    | Description                   |
+| :--------------------------- | :--------------------------------------------------------------------- |:----------------------------- |
+| Text color                   | ![#FFFFFFFF](https://placehold.co/15x15/FFFFFF/FFFFFF.png) `#FFFFFFFF` | Titles and subtitles          |
+| Background color             | ![#0C1136FF](https://placehold.co/15x15/0C1136/0C1136.png) `#0C1136FF` | Global background             |
 
 ## ⚙️ Scripts
 
-This project use [pnpm](https://pnpm.io) as package manager.  
+This project use [pnpm](https://pnpm.io) as package manager.
 You can also use [npm](https://www.npmjs.com) but you have to edit commands from documentation to make it work properly.
 
-### dev
-
-Command: `pnpm dev`
-
-Start Astro web development server at [http://localhost:4321/Linkub](http://localhost:4321/Linkub).
-
-### check
-
-Command: `pnpm check`
-
-Scan all source files and search for TypeScript warnings and errors.
-
-### build
-
-Command: `pnpm build`
-
-Build static pages from source files in `build/` folder.
-
-### preview
-
-Command: `pnpm preview`
-
-Start Astro web server to preview static pages (`build/`) at [http://localhost:4321/Linkub](http://localhost:4321/Linkub).
-
-### test
-
-Default: `pnpm test`
-
-One time run of all tests inside `test/` folder with complete code coverage.
-
-### coverage
-
-Default: `pnpm coverage`
-
-Start Vite web server to preview coverage report at [http://localhost:4173](http://localhost:4173).
+| Command           | Action                                                    |
+| :---------------- | :-------------------------------------------------------- |
+| `pnpm install`    | Installs dependencies                                     |
+| `pnpm dev`        | Starts local dev server at `localhost:4321`               |
+| `pnpm check`      | Scan source files for warnings and errors                 |
+| `pnpm test`       | Run unit tests                                            |
+| `pnpm coverage`   | Preview code coverage from unit tests at `localhost:4173` |
+| `pnpm build`      | Build your production site to `build/`                    |
+| `pnpm preview`    | Preview your build locally at `localhost:4321`            |
 
 ## 💁‍♀️ Q&A
 
@@ -139,17 +131,17 @@ The list of links is constructed by following an array of objects:
   pack?: string;
 ```
 
-The `name` and `url` associated with the link are required.  
+The `name` and `url` associated with the link are required.
 The icons used come from the [@iconify-json/fa6-brands](https://icon-sets.iconify.design/fa6-brands/?keyword=fa6) icon pack, using the link name by default to select the displayed icon.
 
 If the default behavior does not suit you, you can force a different icon only from the [@iconify-json/fa6-brands](https://icon-sets.iconify.design/fa6-brands/?keyword=fa6) icon pack by specifying the `icon` field.
 
-If you want to use another icon pack from [iconify](https://icon-sets.iconify.design/), you must use `icon` and `pack` together.  
+If you want to use another icon pack from [iconify](https://icon-sets.iconify.design/), you must use `icon` and `pack` together.
 Also, remember to install the library with `pnpm install @iconify-json/...` in the project and restart any instance of Astro previously running.
 
 ### How do I deploy the project?
 
-By default, the project includes a workflow to automate the deployment of the website on GitHub Pages from the main branch, but you need to change the Astro configuration (`astro.config.mts`) to match the expected URL.
+By default, the project includes a workflow to automate the deployment of the website on GitHub Pages from the main branch, but **you need to change the Astro configuration (`astro.config.mts`) to match the expected URL**.
 
 If you want to deploy the website elsewhere, you need to build the project with the command `pnpm build` and deploy the files from `build/` to any web hosting platform that supports static websites.
 Please refer directly to the documentation of the relevant platforms.

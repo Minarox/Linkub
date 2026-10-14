@@ -16,6 +16,6 @@ test("Landing page", async () => {
 	expect(body).toContain("<svg")
 	expect(body).toContain("<h1")
 	expect(body).toContain(`${title}</h1>`)
-	expect(body).toContain("</header> <article ")
-	expect(body).toContain("</article> </main>")
+	expect(body).toMatch(/<\/header>\s*<article /)
+	expect(body).toMatch(/<\/article>\s*<\/main>/)
 })

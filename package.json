@@ -19,7 +19,7 @@
     },
     "type": "module",
     "private": true,
-    "version": "1.0.12",
+    "version": "1.0.13",
     "scripts": {
         "dev": "astro dev",
         "check": "astro check",
@@ -29,27 +29,20 @@
         "coverage": "astro preview --root ./coverage"
     },
     "dependencies": {
-        "@astrojs/sitemap": "^3.7.0",
+        "@astrojs/sitemap": "^3.7.4",
         "@iconify-json/fa6-brands": "^1.2.6",
         "@iconify-json/mdi": "^1.2.3",
-        "astro": "^5.17.0",
-        "astro-compressor": "^1.2.0",
-        "astro-font": "^1.1.0",
-        "astro-icon": "^1.1.5",
-        "astro-meta-tags": "^0.4.0",
-        "astro-seo": "^1.1.0",
-        "sharp": "^0.34.5"
+        "astro": "^7.3.8",
+        "astro-compressor": "^2.0.1",
+        "astro-font": "^1.2.0",
+        "astro-icon": "^1.2.0",
+        "astro-meta-tags": "^0.4.1",
+        "astro-seo": "^1.2.0",
+        "sharp": "^0.35.5"
     },
     "devDependencies": {
-        "@vitest/coverage-v8": "^4.0.18",
-        "vitest": "^4.0.18"
+        "@vitest/coverage-v8": "^5.0.4",
+        "vitest": "^5.0.4"
     },
-    "pnpm": {
-        "onlyBuiltDependencies": [
-            "@parcel/watcher",
-            "esbuild",
-            "sharp"
-        ]
-    },
-    "packageManager": "pnpm@10.25.0+sha512.5e82639027af37cf832061bcc6d639c219634488e0f2baebe785028a793de7b525ffcd3f7ff574f5e9860654e098fe852ba8ac5dd5cefe1767d23a020a92f501"
+    "packageManager": "pnpm@12.11.2"
 }

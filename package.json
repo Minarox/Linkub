@@ -32,7 +32,7 @@
         "@astrojs/sitemap": "^3.7.4",
         "@iconify-json/fa6-brands": "^1.2.6",
         "@iconify-json/mdi": "^1.2.3",
-        "astro": "^7.3.8",
+        "astro": "^7.4.4",
         "astro-compressor": "^2.0.1",
         "astro-font": "^1.2.0",
         "astro-icon": "^1.2.0",
